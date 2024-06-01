@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Sign-up Form</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <div id="container">
@@ -13,21 +14,23 @@
           <p class="description">
             This is not a real online service! You know you need something like
             this in your life to help you realize your deepest dreams. Sign up
-            now to get started.
+            <span class="italics">now</span> to get started.
           </p>
-          <p class="description">You know you want to.</p>
+          <p class="description">
+            You <span class="italics">know</span> you want to.
+          </p>
         </div>
         <div id="form">
           <form action="/somewhere" method="post">
             <fieldset>
-              <legend>Let's do this!</legend>
-              <div id="form-left-column">
+              <div class="form-column">
                 <div class="form-field">
                   <label for="first-name" class="input-label">First Name</label
                   ><input
                     type="text"
                     name="firstName"
                     id="first-name"
+                    minlength="2"
                     required
                   />
                 </div>
@@ -41,14 +44,23 @@
                     type="password"
                     name="password"
                     id="password"
+                    minlength="2"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                    title="Minimum 8 characters, at least one letter and one number"
                     required
                   />
                 </div>
               </div>
-              <div id="form-right-column">
+              <div class="form-column">
                 <div class="form-field">
                   <label for="last-name" class="input-label">Last Name</label
-                  ><input type="text" name="lastName" id="last-name" required />
+                  ><input
+                    type="text"
+                    name="lastName"
+                    id="last-name"
+                    minlength="2"
+                    required
+                  />
                 </div>
                 <div class="form-field">
                   <label for="phone-number" class="input-label"
@@ -57,21 +69,29 @@
                     type="tel"
                     name="phoneNumber"
                     id="phone-number"
+                    minlength="9"
                     required
                   />
                 </div>
                 <div class="form-field">
                   <label for="confirm-password" class="input-label"
                     >Confirm Password</label
-                  ><input type="password" id="confirm-password" required />
+                  ><input
+                    type="password"
+                    id="confirm-password"
+                    minlength="2"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                    required
+                  />
                 </div>
               </div>
             </fieldset>
+            <hr />
+            <div id="form-submit">
+              <button type="submit">Create Account</button>
+              <p>Already have an account? <a href="index.html">Log in</a></p>
+            </div>
           </form>
-        </div>
-        <div id="form-submit">
-          <button type="submit">Create Account</button>
-          <p>Already have an account? <a href="/">Log in</a></p>
         </div>
       </div>
     </div>
