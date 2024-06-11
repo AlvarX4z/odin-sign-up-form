@@ -35,24 +35,6 @@
                   />
                 </div>
                 <div class="form-field">
-                  <label for="email" class="input-label">Email</label
-                  ><input type="email" name="email" id="email" required />
-                </div>
-                <div class="form-field">
-                  <label for="password" class="input-label">Password</label
-                  ><input
-                    type="password"
-                    name="password"
-                    id="password"
-                    minlength="2"
-                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
-                    title="Minimum 8 characters, at least one letter and one number"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-column">
-                <div class="form-field">
                   <label for="last-name" class="input-label">Last Name</label
                   ><input
                     type="text"
@@ -63,13 +45,32 @@
                   />
                 </div>
                 <div class="form-field">
+                  <label for="email" class="input-label">Email</label
+                  ><input type="email" name="email" id="email" required />
+                </div>
+              </div>
+              <div class="form-column">
+                <div class="form-field">
                   <label for="phone-number" class="input-label"
                     >Phone Number</label
                   ><input
                     type="tel"
                     name="phoneNumber"
                     id="phone-number"
-                    minlength="9"
+                    pattern="\d{9}"
+                    title="9 digits"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="password" class="input-label">Password</label
+                  ><input
+                    type="password"
+                    name="password"
+                    id="password"
+                    minlength="2"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                    title="Minimum 8 characters, at least one letter and one number"
                     required
                   />
                 </div>
