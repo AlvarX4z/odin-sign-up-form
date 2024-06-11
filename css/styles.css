@@ -84,8 +84,8 @@ label {
 }
 
 input {
-  border: 1px solid var(--form-input-border-color, lightgray);
   border-radius: 0.3rem;
+  border: 1px solid var(--form-input-border-color, lightgray);
   height: 3vh;
   padding: 0 0.5vw;
 }
@@ -100,16 +100,16 @@ hr {
 }
 
 #form-submit {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 #form-submit > button {
   background-color: var(--accent-color, olive);
-  color: var(--form-input-border-color, white);
-  border: none;
   border-radius: 0.3rem;
+  border: none;
+  color: var(--form-input-border-color, white);
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 2vh;
